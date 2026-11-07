@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanya Fonseca | Lashes & Eyebrows Designer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nude: {
+                            50: '#FDFBF7',
+                            100: '#F7F1EB',
+                            200: '#ECE1D6',
+                            300: '#DCCBBA',
+                            400: '#C7AE97',
+                            500: '#B09077',
+                        },
+                        gold: {
+                            light: '#E6CA65',
+                            DEFAULT: '#C59B27',
+                            dark: '#9A7513',
+                        },
+                        charcoal: '#222222',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4A373 0%, #C59B73 50%, #A4784F 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #B58451 0%, #8E5C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 163, 115, 0.18);
+        }
+    </style>
+</head>
+<body class="bg-nude-50 text-charcoal font-sans antialiased selection:bg-nude-300 selection:text-charcoal">
+
+<!-- Top Announcement Bar
+<div class="bg-charcoal text-nude-100 text-xs md:text-sm py-2 px-4 text-center tracking-wider font-medium flex items-center justify-center gap-2">
+    <span>🇵🇹 Atendimento por Marcação em Portugal</span>
+    <span class="hidden md:inline">•</span>
+    <span class="hidden md:inline text-nude-300">Vagas Limitadas para este Mês</span>
+</div>
+-->
+<!-- Navigation Header -->
+<header class="sticky top-0 z-40 bg-nude-50/90 backdrop-blur-md border-b border-nude-200/60 transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Logo Brand -->
+        <a href="#" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-white font-serif font-bold text-xl shadow-md">
+                VF
+            </div>
+            <div>
+                <span class="font-serif text-lg font-bold tracking-tight block leading-tight text-charcoal">VANYA FONSECA</span>
+                <span class="text-[10px] uppercase tracking-widest text-nude-500 font-semibold">Lashes & Eyebrows</span>
+            </div>
+        </a>
+
+        <!-- Desktop Nav Menu -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-charcoal/80">
+            <a href="#sobre" class="hover:text-nude-500 transition-colors">Sobre</a>
+            <a href="#servicos" class="hover:text-nude-500 transition-colors">Serviços</a>
+            <a href="#simulador" class="hover:text-nude-500 transition-colors">Simular Agendamento</a>
+            <a href="#cuidados" class="hover:text-nude-500 transition-colors">Guia de Cuidados</a>
+            <a href="#galeria" class="hover:text-nude-500 transition-colors">Resultados</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 gold-gradient text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:opacity-95 transition-all transform hover:-translate-y-0.5">
+            <i class="fa-regular font-bold fa-calendar-check"></i>
+            <span>Marcar Sessão</span>
+        </a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div class="space-y-6 text-center md:text-left z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-nude-200/70 text-nude-500 text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-gem text-xs"></i> Estética do Olhar Premium
+            </div>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-charcoal leading-[1.15]">
+                Realce a beleza natural do seu olhar com <span class="italic font-normal gold-text-gradient">precisão & elegância</span>
+            </h1>
+            <p class="text-charcoal/75 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 font-light">
+                Especialista certificada em Extensões de Pestanas e Design Simétrico de Sobrancelhas. Procedimentos personalizados que valorizam a sua fisionomia única.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                <a href="#simulador" class="w-full sm:w-auto gold-gradient text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Agendar no WhatsApp</span>
+                </a>
+                <a href="#servicos" class="w-full sm:w-auto border border-nude-300 bg-white/50 text-charcoal px-8 py-4 rounded-full font-semibold hover:bg-nude-100 transition-all text-center">
+                    Ver Serviços
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="pt-8 border-t border-nude-200/80 grid grid-cols-3 gap-4 text-center md:text-left">
+                <div>
+                    <i class="fa-solid fa-award text-nude-500 text-xl mb-1"></i>
+                    <p class="text-xs font-bold text-charcoal">Certificada</p>
+                    <p class="text-[11px] text-charcoal/60">Técnicas Avançadas</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-heart-pulse text-nude-500 text-xl mb-1"></i>
+                    <p class="text-xs font-bold text-charcoal">Saúde Ciliar</p>
+                    <p class="text-[11px] text-charcoal/60">Isolamento Perfeito</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-sparkles text-nude-500 text-xl mb-1"></i>
+                    <p class="text-xs font-bold text-charcoal">Produtos Premium</p>
+                    <p class="text-[11px] text-charcoal/60">Hipoalergénicos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Visual Preview -->
+        <div class="relative flex justify-center z-10">
+            <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="imagens/vanya-ceo.jpeg"
+                     alt="Extensão de Pestanas Profissional"
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent flex items-end p-6">
+                    <div class="text-white glass-card p-4 rounded-2xl w-full">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-nude-200 overflow-hidden flex-shrink-0">
+                                <img src="imagens/logo-vanya.jpeg" alt="Vanya Fonseca" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-charcoal">Vanya Fonseca</h4>
+                                <p class="text-[11px] text-charcoal/70">Lashes & Eyebrows Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SECTION: Interactive Before/After & Media Showcase -->
+<section id="antes-depois" class="py-20 bg-nude-100/40 border-y border-nude-200/50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Transformação Real</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Antes & Depois</h2>
+            <p class="text-xs text-charcoal/60 mt-2">Arraste o divisor para ver a precisão e o detalhe do resultado.</p>
+        </div>
+
+        <!-- Slider Comparativo Antes / Depois -->
+        <div class="max-w-3xl mx-auto">
+            <div id="beforeAfterSlider" class="relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl select-none border-4 border-white">
+                <!-- Imagem DEPOIS (Fundo) -->
+                <img src="imagens/foto-depois.jpeg"
+                     alt="Depois - Pestanas Perfeitas"
+                     class="absolute inset-0 w-full h-full object-cover">
+                <span class="absolute top-4 right-4 bg-charcoal/80 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-md">DEPOIS</span>
+
+                <!-- Imagem ANTES (Sobreposição cortada) -->
+                <div id="beforeImageWrapper" class="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r-2 border-white shadow-2xl">
+                    <img src="imagens/foto-antes.jpeg"
+                         alt="Antes - Natural"
+                         class="absolute inset-0 w-full h-full object-cover max-w-none" id="beforeImage">
+                    <span class="absolute top-4 left-4 bg-white/90 text-charcoal text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-md">ANTES</span>
+                </div>
+
+                <!-- Divisor e Manipulador de Arrasto -->
+                <input type="range" min="0" max="100" value="50" id="sliderRange"
+                       class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+                       oninput="moveSlider(this.value)">
+                <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 -ml-4 w-8 flex items-center justify-center pointer-events-none z-20">
+                    <div class="w-8 h-8 rounded-full gold-gradient shadow-lg flex items-center justify-center text-white text-xs border-2 border-white">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SECTION: Work Videos & Reels Gallery -->
+<section id="videos" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Bastidores & Processo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Vídeos do Trabalho</h2>
+            <p class="text-xs text-charcoal/60 mt-2">Veja a delicadeza, higiene e o passo a passo de cada procedimento.</p>
+            <div class="w-12 h-0.5 gold-gradient mx-auto mt-4"></div>
+        </div>
+
+        <!-- Grelha de Vídeos Estilo Reels -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- VÍDEO 1 -->
+            <div class="relative group rounded-3xl overflow-hidden bg-charcoal aspect-[9/16] shadow-xl border border-nude-200/80 cursor-pointer" onclick="openVideoModal('videos/video-1.mp4', 'Aplicação de Pestanas Fio a Fio')">
+                <!-- Placeholder Thumbnail do Vídeo 1 (Substituir 'src' pela tua foto) -->
+                <img src="imagens/foto-video1.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent p-6 flex flex-col justify-between">
+                    <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white text-sm">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-full bg-nude-500/80 text-white text-[10px] font-semibold uppercase mb-2">Procedimento</span>
+                        <h4 class="text-white font-serif text-lg font-medium">Aplicação Fio a Fio ao Pormenor</h4>
+                        <p class="text-white/70 text-xs mt-1">Ver vídeo completo (0:30)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VÍDEO 2 -->
+            <div class="relative group rounded-3xl overflow-hidden bg-charcoal aspect-[9/16] shadow-xl border border-nude-200/80 cursor-pointer" onclick="openVideoModal('videos/video-2.mp4', 'Finalização Brow Lamination')">
+                <!-- Placeholder Thumbnail do Vídeo 2 -->
+                <img src="imagens/foto-video2.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent p-6 flex flex-col justify-between">
+                    <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white text-sm">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-full bg-nude-500/80 text-white text-[10px] font-semibold uppercase mb-2">Sobrancelhas</span>
+                        <h4 class="text-white font-serif text-lg font-medium">Resultado Brow Lamination</h4>
+                        <p class="text-white/70 text-xs mt-1">Ver vídeo completo (0:45)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VÍDEO 3 -->
+            <div class="relative group rounded-3xl overflow-hidden bg-charcoal aspect-[9/16] shadow-xl border border-nude-200/80 cursor-pointer" onclick="openVideoModal('videos/video-3.mp4', 'Volume Russo Efeito Marcante')">
+                <!-- Placeholder Thumbnail do Vídeo 3 -->
+                <img src="imagens/foto-video3.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent p-6 flex flex-col justify-between">
+                    <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white text-sm">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-full bg-nude-500/80 text-white text-[10px] font-semibold uppercase mb-2">Volume Russo</span>
+                        <h4 class="text-white font-serif text-lg font-medium">Preenchimento & Densidade</h4>
+                        <p class="text-white/70 text-xs mt-1">Ver vídeo completo (0:20)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Modal Leitor de Vídeo -->
+<div id="videoModal" class="fixed inset-0 z-50 bg-charcoal/95 backdrop-blur-lg hidden items-center justify-center p-4">
+    <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-nude-300 transition-colors z-50">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-md w-full aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl relative">
+        <video id="modalVideoPlayer" controls class="w-full h-full object-cover">
+            <source id="modalVideoSource" src="" type="video/mp4">
+            O seu navegador não suporta reprodução de vídeos.
+        </video>
+        <div class="absolute bottom-4 left-4 right-4 text-white pointer-events-none">
+            <h5 id="modalVideoTitle" class="font-serif text-lg font-semibold drop-shadow-md"></h5>
+        </div>
+    </div>
+</div>
+
+<!-- Services Showcase -->
+<section id="servicos" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Menu Exclusivo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Procedimentos & Tratamentos</h2>
+            <div class="w-12 h-0.5 gold-gradient mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="group bg-nude-50 rounded-2xl p-8 border border-nude-200/60 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div class="w-14 h-14 rounded-2xl bg-nude-200/60 flex items-center justify-center text-nude-500 text-2xl mb-6 group-hover:gold-gradient group-hover:text-white transition-all">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="font-serif text-2xl text-charcoal mb-3">Extensão de Pestanas</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Aplicação minuciosa fio a fio ou volume personalizado respeitando a saúde da sua pestana natural.
+                </p>
+                <ul class="space-y-2.5 text-xs text-charcoal/80 mb-8 border-t border-nude-200/80 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Fio a Fio Clássico (Efeito Natural)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Volume Híbrido & Russo</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Lash Lifting com Nutrição</li>
+                </ul>
+                <a href="#simulador" onclick="preselectService('pestanas')" class="inline-flex items-center gap-2 text-sm font-semibold text-nude-500 group-hover:text-charcoal transition-colors">
+                    Simular Marcação <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="group bg-nude-50 rounded-2xl p-8 border border-nude-200/60 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div class="w-14 h-14 rounded-2xl bg-nude-200/60 flex items-center justify-center text-nude-500 text-2xl mb-6 group-hover:gold-gradient group-hover:text-white transition-all">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="font-serif text-2xl text-charcoal mb-3">Design de Sobrancelhas</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Mapeamento facial para encontrar a simetria ideal que harmoniza e valoriza o seu rosto.
+                </p>
+                <ul class="space-y-2.5 text-xs text-charcoal/80 mb-8 border-t border-nude-200/80 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Design Geométrico Personalizado</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Brow Lamination (Efeito Alinhado)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Coloração com Henna Premium</li>
+                </ul>
+                <a href="#simulador" onclick="preselectService('sobrancelhas')" class="inline-flex items-center gap-2 text-sm font-semibold text-nude-500 group-hover:text-charcoal transition-colors">
+                    Simular Marcação <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="group bg-nude-50 rounded-2xl p-8 border border-nude-200/60 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div class="w-14 h-14 rounded-2xl bg-nude-200/60 flex items-center justify-center text-nude-500 text-2xl mb-6 group-hover:gold-gradient group-hover:text-white transition-all">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <h3 class="font-serif text-2xl text-charcoal mb-3">Combos & Manutenção</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Pacotes completos para manter o seu olhar impecável durante semanas com economia.
+                </p>
+                <ul class="space-y-2.5 text-xs text-charcoal/80 mb-8 border-t border-nude-200/80 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Combo Olhar Olhar Perfeito (Lashes + Brow)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Manutenção de Extensão</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nude-500"></i> Kit Home Care de Higienização</li>
+                </ul>
+                <a href="#simulador" onclick="preselectService('combo')" class="inline-flex items-center gap-2 text-sm font-semibold text-nude-500 group-hover:text-charcoal transition-colors">
+                    Simular Marcação <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Booking Simulator -->
+<section id="simulador" class="py-20 bg-nude-100/60 border-y border-nude-200/80">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Agendamento Rápido</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Simulador de Marcação</h2>
+            <p class="text-xs text-charcoal/60 mt-2">Monte o seu procedimento e envie a reserva diretamente no WhatsApp.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-nude-200/80">
+            <form id="bookingForm" class="space-y-8" onsubmit="event.preventDefault(); sendWhatsApp();">
+
+                <!-- Step 1: Select Main Service -->
+                <div>
+                    <label class="block font-serif text-lg font-medium text-charcoal mb-4">1. Escolha o Procedimento Principal</label>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all option-card">
+                            <input type="radio" name="service" value="Extensão Fio a Fio" class="hidden" checked onchange="updateTotal()">
+                            <div>
+                                <span class="font-semibold block text-sm">Extensão Pestanas Fio a Fio</span>
+                                <span class="text-xs text-charcoal/60">Visual natural e elegante</span>
+                            </div>
+                            <span class="text-sm font-bold text-nude-500">€35.00</span>
+                        </label>
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all option-card">
+                            <input type="radio" name="service" value="Volume Russo / Híbrido" class="hidden" onchange="updateTotal()">
+                            <div>
+                                <span class="font-semibold block text-sm">Volume Russo / Híbrido</span>
+                                <span class="text-xs text-charcoal/60">Mais volume e densidade</span>
+                            </div>
+                            <span class="text-sm font-bold text-nude-500">€45.00</span>
+                        </label>
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all option-card">
+                            <input type="radio" name="service" value="Brow Lamination + Design" class="hidden" onchange="updateTotal()">
+                            <div>
+                                <span class="font-semibold block text-sm">Brow Lamination + Design</span>
+                                <span class="text-xs text-charcoal/60">Sobrancelhas alinhadas</span>
+                            </div>
+                            <span class="text-sm font-bold text-nude-500">€30.00</span>
+                        </label>
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all option-card">
+                            <input type="radio" name="service" value="Combo Olhar Completo" class="hidden" onchange="updateTotal()">
+                            <div>
+                                <span class="font-semibold block text-sm">Combo Olhar Completo</span>
+                                <span class="text-xs text-charcoal/60">Lashes + Design Henna</span>
+                            </div>
+                            <span class="text-sm font-bold text-nude-500">€55.00</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 2: Extras -->
+                <div>
+                    <label class="block font-serif text-lg font-medium text-charcoal mb-4">2. Adicionais Exclusivos (Opcional)</label>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all extra-card">
+                            <input type="checkbox" name="extra" value="Kit Limpeza Lash Care (+€5)" data-price="5" class="rounded text-nude-500 focus:ring-0" onchange="updateTotal()">
+                            <span class="text-sm">Kit Limpeza Lash Care</span>
+                            <span class="text-xs font-semibold text-nude-500">+€5.00</span>
+                        </label>
+                        <label class="cursor-pointer border-2 border-nude-200 rounded-2xl p-4 flex items-center justify-between hover:border-nude-400 transition-all extra-card">
+                            <input type="checkbox" name="extra" value="Sobrancelhas Henna (+€10)" data-price="10" class="rounded text-nude-500 focus:ring-0" onchange="updateTotal()">
+                            <span class="text-sm">Aplicação de Henna Premium</span>
+                            <span class="text-xs font-semibold text-nude-500">+€10.00</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 3: Preferred Schedule -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2">Dia Preferencial</label>
+                        <input type="date" id="bookingDate" required class="w-full bg-nude-50 border border-nude-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-nude-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-charcoal/70 mb-2">Horário Preferencial</label>
+                        <select id="bookingTime" required class="w-full bg-nude-50 border border-nude-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-nude-400">
+                            <option value="Manhã (09h - 12h)">Manhã (09h - 12h)</option>
+                            <option value="Tarde (14h - 17h)">Tarde (14h - 17h)</option>
+                            <option value="Fim de Tarde (17h - 19h)">Fim de Tarde (17h - 19h)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Summary & Submit Button -->
+                <div class="pt-6 border-t border-nude-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs text-charcoal/60 uppercase tracking-wider block">Valor Estimado</span>
+                        <span id="totalPrice" class="text-3xl font-serif font-bold text-nude-500">€35.00</span>
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto gold-gradient text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Confirmar Disponibilidade</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Care Guide Section -->
+<section id="cuidados" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Durabilidade & Saúde</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Guia Prático de Cuidados</h2>
+            <p class="text-xs text-charcoal/60 mt-2">Dicas simples para manter o seu olhar intacto por muito mais tempo.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Recommendations Card 1 -->
+            <div class="bg-nude-50/70 p-6 rounded-2xl border border-nude-200/60">
+                <h3 class="font-serif text-xl font-semibold mb-4 text-charcoal flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-nude-500"></i> Nas Primeiras 24 Horas
+                </h3>
+                <ul class="space-y-3 text-sm text-charcoal/80">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                        <span>Evite molhar a zona dos olhos (água ou vapor quente).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                        <span>Não frequente saunas, ginásio intencional ou piscinas.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                        <span>Evite aplicar maquilhagem cremosa na pálpebra superior.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Recommendations Card 2 -->
+            <div class="bg-nude-50/70 p-6 rounded-2xl border border-nude-200/60">
+                <h3 class="font-serif text-xl font-semibold mb-4 text-charcoal flex items-center gap-2">
+                    <i class="fa-solid fa-sparkles text-nude-500"></i> Manutenção Diária
+                </h3>
+                <ul class="space-y-3 text-sm text-charcoal/80">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Escove suavemente as pestanas diariamente com a escovinha.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Lave os olhos com champô neutro/específico para pestanas.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                        <span>Agende a sua manutenção entre 2 a 3 semanas.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery / Results Showcase -->
+<section id="galeria" class="py-20 bg-nude-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest font-semibold text-nude-500">Portefólio de Clientes</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-charcoal mt-2">Galeria de Trabalhos</h2>
+            <div class="w-12 h-0.5 gold-gradient mx-auto mt-4"></div>
+        </div>
+
+        <!-- Extended Image Gallery -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
+                <img src="imagens/logo-vanya.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Resultado Pestanas 1">
+                <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                    Volume Russo Premium
+                </div>
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
+                <img src="imagens/foto-trabalho-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Resultado Sobrancelha">
+                <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                    Brow Lamination + Henna
+                </div>
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
+                <img src="imagens/foto-trabalho-2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Resultado Fio a Fio">
+                <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                    Extensão Fio a Fio Clássica
+                </div>
+            </div>
+            <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
+                <img src="imagens/foto-trabalho-3.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Resultado Lash Lifting">
+                <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+                    Lash Lifting & Nutrição
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="https://www.instagram.com/vanya_lashes_designer/" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-charcoal border-b border-charcoal pb-1 hover:text-nude-500 hover:border-nude-500 transition-all">
+                <i class="fa-brands fa-instagram text-base"></i> Ver mais fotos & vídeos no Instagram @vanya_lashes_designer
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer & Contact -->
+<footer class="bg-charcoal text-white pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 border-b border-white/10 pb-12">
+        <div>
+            <h3 class="font-serif text-2xl mb-4">VANYA FONSECA</h3>
+            <p class="text-white/70 text-sm leading-relaxed mb-4">
+                Especialista em valorizar o olhar feminino com delicadeza, simetria e produtos de excelência em Portugal.
+            </p>
+            <div class="flex gap-4">
+                <a href="https://www.instagram.com/vanya_lashes_designer/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-nude-500 transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/351920512890" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-500 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="font-serif text-lg mb-4 text-nude-300">Horário de Atendimento</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+                <li class="flex justify-between"><span>Segunda - Sexta:</span> <span>09:00 - 19:00</span></li>
+                <li class="flex justify-between"><span>Sábado:</span> <span>09:00 - 15:00</span></li>
+                <li class="flex justify-between"><span>Domingo:</span> <span>Encerrado</span></li>
+                <li class="pt-2 text-xs text-nude-400">* Exclusivamente por marcação prévia.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-serif text-lg mb-4 text-nude-300">Localização</h4>
+            <p class="text-sm text-white/70 mb-4">
+                <i class="fa-solid fa-location-dot text-nude-400 mr-2"></i> Atendimento em Gabinete Privativo | Portugal
+            </p>
+            <a href="#simulador" class="inline-block gold-gradient text-white text-xs uppercase tracking-wider font-semibold px-6 py-3 rounded-full shadow-md">
+                Marcar Sessão Agora
+            </a>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-8 text-center text-xs text-white/40 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Juilson Fonseca Pandupe. Todos os direitos reservados.</p>
+        <p class="text-white/60">Design Exclusivo para Conversão Premium</p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/351920512890?text=Ol%C3%A1%20Vanya,%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20seus%20servi%C3%A7os!"
+   target="_blank"
+   aria-label="Contacto via WhatsApp"
+   class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-300">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Interactive Script -->
+<script>
+    // Before/After Slider Interaction Logic
+    function moveSlider(val) {
+        const wrapper = document.getElementById('beforeImageWrapper');
+        const handle = document.getElementById('sliderHandle');
+        const beforeImg = document.getElementById('beforeImage');
+        const slider = document.getElementById('beforeAfterSlider');
+
+        if (wrapper && handle && beforeImg && slider) {
+            wrapper.style.width = val + '%';
+            handle.style.left = val + '%';
+            beforeImg.style.width = slider.offsetWidth + 'px';
+        }
+    }
+
+    // Adjust Before Image width on window resize
+    window.addEventListener('resize', () => {
+        const range = document.getElementById('sliderRange');
+        if (range) moveSlider(range.value);
+    });
+
+    // Modal Video Control Functions
+    function openVideoModal(videoUrl, title) {
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('modalVideoPlayer');
+        const source = document.getElementById('modalVideoSource');
+        const titleElement = document.getElementById('modalVideoTitle');
+
+        if (modal && player && source) {
+            source.src = videoUrl;
+            player.load();
+            if (titleElement) titleElement.innerText = title;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            player.play();
+        }
+    }
+
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('modalVideoPlayer');
+        if (modal && player) {
+            player.pause();
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    }
+
+    // Update Total Price Dynamic Calculation
+    function updateTotal() {
+        let total = 0;
+
+        // Get selected main service price
+        const selectedService = document.querySelector('input[name="service"]:checked');
+        if (selectedService) {
+            if (selectedService.value.includes('Fio a Fio')) total += 35;
+            else if (selectedService.value.includes('Volume Russo')) total += 45;
+            else if (selectedService.value.includes('Brow Lamination')) total += 30;
+            else if (selectedService.value.includes('Combo')) total += 55;
+        }
+
+        // Get selected extras
+        const extras = document.querySelectorAll('input[name="extra"]:checked');
+        extras.forEach(extra => {
+            total += parseFloat(extra.dataset.price || 0);
+        });
+
+        // Update DOM display
+        document.getElementById('totalPrice').innerText = '€' + total.toFixed(2);
+
+        // Highlight selected options
+        document.querySelectorAll('.option-card').forEach(card => {
+            const radio = card.querySelector('input[type="radio"]');
+            if (radio && radio.checked) {
+                card.classList.add('border-nude-500', 'bg-nude-50');
+                card.classList.remove('border-nude-200');
+            } else {
+                card.classList.remove('border-nude-500', 'bg-nude-50');
+                card.classList.add('border-nude-200');
+            }
+        });
+    }
+
+    // Preselect Service from Services Cards
+    function preselectService(type) {
+        const radios = document.querySelectorAll('input[name="service"]');
+        if (type === 'pestanas') radios[0].checked = true;
+        if (type === 'sobrancelhas') radios[2].checked = true;
+        if (type === 'combo') radios[3].checked = true;
+        updateTotal();
+    }
+
+    // Send WhatsApp Message Generator
+    function sendWhatsApp() {
+        const service = document.querySelector('input[name="service"]:checked').value;
+        const date = document.getElementById('bookingDate').value;
+        const time = document.getElementById('bookingTime').value;
+        const total = document.getElementById('totalPrice').innerText;
+
+        const selectedExtras = [];
+        document.querySelectorAll('input[name="extra"]:checked').forEach(cb => {
+            selectedExtras.push(cb.value);
+        });
+
+        let message = `Olá Vanya! Gostaria de agendar uma sessão:%0A%0A`;
+        message += ` *Procedimento:* ${service}%0A`;
+        if (selectedExtras.length > 0) {
+            message += ` *Adicionais:* ${selectedExtras.join(', ')}%0A`;
+        }
+        message += ` *Data Preferencial:* ${date || 'A combinar'}%0A`;
+        message += ` *Horário:* ${time}%0A`;
+       // message += ` *Valor Estimado:* ${total}%0A%0A`;
+        message += `Está disponível neste dia?`;
+
+        // Open WhatsApp Link (Replace Phone number if needed)
+        const phone = "351920512890";
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    }
+
+    // Set default minimum date to today
+    document.addEventListener('DOMContentLoaded', () => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('bookingDate').setAttribute('min', today);
+        updateTotal();
+    });
+</script>
+</body>
+</html>
